@@ -1,70 +1,168 @@
-# Getting Started with Create React App
+# Netflix Clone UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive Netflix clone built with React.js that replicates the Netflix user interface and experience. This project features user authentication, movie browsing, video streaming, and a personalized watchlist.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **User Authentication**: Secure login/signup with Firebase Authentication
+- **Responsive Design**: Fully responsive interface that works on all devices
+- **Movie Browsing**: Browse movies and TV shows by categories
+- **Video Player**: Built-in video player for streaming content
+- **Personal Watchlist**: Add/remove movies from your personal list
+- **Dynamic Content**: Real-time content loading and management
+- **Netflix-like UI**: Pixel-perfect recreation of Netflix's interface
 
-### `npm start`
+## 📱 Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Home Page
+![Home Page](public/screenshot/Screenshot%202025-09-02%20at%2001.47.23.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Movie Browser
+![Movie Browser](public/screenshot/Screenshot%202025-09-02%20at%2001.47.49.png)
 
-### `npm test`
+### TV Shows
+![TV Shows](public/screenshot/Screenshot%202025-09-02%20at%2001.48.07.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### SignIn
+![My List](public/screenshot/Screenshot%202025-09-02%20at%2001.48.22.png)
 
-### `npm run build`
+### SignUp
+![Video Player](public/screenshot/Screenshot%202025-09-02%20at%2001.48.39.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React 18.3.1
+- **Routing**: React Router DOM 6.26.1
+- **State Management**: Redux Toolkit 2.2.7 & React Redux 9.1.2
+- **Styling**: Styled Components 6.1.12 & CSS3
+- **Authentication**: Firebase 10.13.0
+- **HTTP Client**: Axios 1.7.5
+- **Icons**: React Icons 5.3.0
+- **Testing**: Jest & React Testing Library
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Installation
 
-### `npm run eject`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/netflix-clone-ui.git
+   cd netflix-clone-ui
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Set up Firebase**
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Enable Authentication and Firestore Database
+   - Copy your Firebase config and update `src/utils/firebase-config.js`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-## Learn More
+## 🔧 Available Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Project Structure
 
-### Code Splitting
+```
+src/
+├── components/          # Reusable UI components
+│   ├── BackgroundImage.jsx
+│   ├── Card.jsx
+│   ├── CardSlider.jsx
+│   ├── Footer.jsx
+│   ├── Header.jsx
+│   ├── NavBar.jsx
+│   └── Slider.jsx
+├── pages/              # Main application pages
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   ├── Netflix.jsx
+│   ├── Movies.jsx
+│   ├── Tv-show.jsx
+│   ├── MyList.jsx
+│   └── Player.jsx
+├── store/              # Redux store configuration
+│   └── index.js
+├── utils/              # Utility functions and configs
+│   ├── constants.js
+│   └── firebase-config.js
+├── assets/             # Static assets (images, videos)
+└── App.jsx             # Main application component
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚦 Routes
 
-### Analyzing the Bundle Size
+- `/` - Home page with featured content
+- `/login` - User login page
+- `/signup` - User registration page
+- `/movies` - Movies catalog
+- `/tv` - TV shows catalog
+- `/mylist` - Personal watchlist
+- `/player` - Video player page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔐 Firebase Configuration
 
-### Making a Progressive Web App
+This project uses Firebase for:
+- **Authentication**: User login/signup
+- **Database**: Storing user data and preferences
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Make sure to set up your Firebase project and update the configuration in `src/utils/firebase-config.js`.
 
-### Advanced Configuration
+## 🌟 Key Features Implementation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Authentication Flow
+- Secure user registration and login
+- Protected routes for authenticated users
+- Persistent user sessions
 
-### Deployment
+### Content Management
+- Dynamic content loading
+- Category-based browsing
+- Search functionality
+- Personalized recommendations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### User Experience
+- Smooth animations and transitions
+- Responsive design for all screen sizes
+- Netflix-like hover effects and interactions
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Netflix for the original design inspiration
+- The Movie Database (TMDb) for movie data
+- Firebase for backend services
+- React community for excellent documentation and resources
+
+## 📞 Contact
+
+Your Name - [gayashan9090@gmail.com](mailto:gayashan9090@gmail.com)
+
+Project Link: [https://github.com/ShenSingh/netflix-clone-ui](https://github.com/ShenSingh/netflix-clone-ui)
+
+---
+
+⭐ Star this repo if you find it helpful!
